@@ -23,9 +23,52 @@ body {
   flex-direction: column;
   background-color: var(--primary-color);
   overflow: auto;
+  background: url(/images/gradient.gif) center/cover;
 }
 
 /* NAVBAR */
+nav {
+  background: var(--navbar-bg-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.1px);
+  border: 1px solid var(--navbar-bg-color);
+}
+
 .navbar-brand {
   font-weight: bold;
 }
+
+.navbar-brand:hover {
+  mix-blend-mode: difference;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+#cart-count {
+  color: var(--text-color-black);
+}
+
+/* HERO */
+.container {
+  flex-grow: 1;
+}
+
+.full-height {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* TEXT STYLES */
+
