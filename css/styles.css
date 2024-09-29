@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #007bff;
+  --footer-bg-color: #343a40;
+  --navbar-bg-color: rgba(255, 255, 255, 0.3);
+  --card-bg-color: rgba(255, 255, 255, 0.3);
+  --text-color-black: #141010;
+}
 @font-face {
   font-family: "Helvetica Neue";
   src: url("/fonts/helveticaneue.woff2");
