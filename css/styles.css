@@ -71,4 +71,14 @@ a {
 }
 
 /* TEXT STYLES */
-
+h1,
+h2,
+.lead,
+.product,
+.checkout,
+.form-check-label,
+.form-group,
+.table,
+.text-right {
+  color: var(--primary-color);
+}
