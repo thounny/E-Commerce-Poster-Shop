@@ -82,3 +82,30 @@ h2,
 .text-right {
   color: var(--primary-color);
 }
+
+/* SPECIFIC TEXT COLOR */
+.white-text {
+  color: var(--primary-color);
+}
+
+.black-text {
+  color: var(--text-color-black);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--primary-color);
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: var(--card-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.1px);
+  border: 1px solid var(--card-bg-color);
+}
+
+/* NAVBAR TOGGLER */
