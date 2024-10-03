@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helveticaneue.woff2");
+  src: url("../fonts/helveticaneue.woff2");
 }
 html,
 body {
@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   background-color: var(--primary-color);
   overflow-y: scroll;
-  background: url(/images/gradient.gif) center / cover;
+  background: url(../images/gradient.gif) center / cover;
 }
 
 /* NAVBAR */
@@ -171,7 +171,7 @@ footer {
 @media (max-width: 992px) {
   body {
     overflow: auto;
-    background: url(/images/gradient.gif) center / cover;
+    background: url(../images/gradient.gif) center / cover;
   }
 
   .container {
