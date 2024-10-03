@@ -41,6 +41,25 @@ The Webamp player is fully responsive and features:
 
 All posters featured in the shop are original creations that reflect my artistic vision and design style, spanning various themes.
 
+## 🌐 Website Previews
+
+Here are some previews of the website pages:
+
+### Homepage
+<img src="preview/home.png" alt="Homepage" width="400px">
+
+### Products Page
+<img src="preview/products.png" alt="Products Page" width="400px">
+
+### Checkout Page
+<img src="preview/checkout.png" alt="Checkout Page" width="400px">
+
+### Register Page
+<img src="preview/register.png" alt="Register Page" width="400px">
+
+### Music Page
+<img src="preview/music.png" alt="Music Page" width="400px">
+
 ## 🏗️ Project Structure
 
 ```bash
