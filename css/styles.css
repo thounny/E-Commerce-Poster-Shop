@@ -108,14 +108,48 @@ footer {
   border: 1px solid var(--card-bg-color);
 }
 
-/* NAVBAR TOGGLER */
+/* Navbar Toggler Styles */
 .navbar-toggler {
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.8); /* White border for toggler */
+  border-radius: 8px; /* Rounded corners */
 }
 
 .navbar-toggler-icon {
-  background-image: (
-    'data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'
-  );
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* White icon lines */
+}
+
+/* WEBAMP */
+#winamp-container {
+  flex-grow: 1; /* Fills the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+.winamp-window {
+  margin-right: 10px; /* Space between player and visualizer */
+}
+
+.gen-window {
+  width: 320px;
+  height: 232px;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  body {
+    overflow: auto; /* Allow scrolling on mobile */
+    background-image: url(/images/4.gif) center/cover;
+  }
+
+  .container {
+    flex: 1; /* Allow the container to grow and fill remaining space */
+    padding-bottom: 20px; /* Optional padding for space at the bottom */
+  }
+
+  /* Specific adjustments for checkout page if needed */
+  .checkout-page {
+    /* Ensure you have a specific class for the checkout page container */
+    overflow: auto; /* Allow scrolling within the checkout page */
+  }
 }
