@@ -53,15 +53,8 @@
         </ul>
       </div>
     </nav>
-    <!-- HERO SECTION -->
-    <main class="container text-center full-height">
-      <h1 class="lead">Welcome to my Poster Shop</h1>
-      <p class="lead">
-        Explore a curated collection of unique posters to elevate your home or
-        office decor. Start browsing now!
-      </p>
-      <a href="products.html" class="btn btn-primary">Shop Now</a>
-    </main>
+    <!-- Centered Webamp Player -->
+    <div id="winamp-container"></div>
 
     <!-- FOOTER -->
     <footer class="text-center py-4">&copy; 2024 thounny</footer>
@@ -69,5 +62,102 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Webamp Initialization Script -->
+    <script src="https://unpkg.com/webamp@1.5.0/built/webamp.bundle.min.js"></script>
+    <script src="https://unpkg.com/butterchurn@2.6.7/lib/butterchurn.min.js"></script>
+    <script src="https://unpkg.com/butterchurn-presets@2.4.7/lib/butterchurnPresets.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (Webamp.browserIsSupported()) {
+          const webamp = new Webamp({
+            // SONGS
+            initialTracks: [
+              {
+                metaData: {
+                  title: "Pandora (for Cindy)",
+                  artist: "Cocteau Twins",
+                },
+                url: "/songs/Pandora (for Cindy).mp3", // Replace with actual path to your audio file
+              },
+              {
+                metaData: {
+                  title: "Never In Your Sun",
+                  artist: "Stevie Wonder",
+                },
+                url: "/songs/Never In Your Sun.mp3",
+              },
+              {
+                metaData: {
+                  title: "Summer's Gone",
+                  artist: "Honeydip",
+                },
+                url: "/songs/Honeydip - Summer's Gone.mp3",
+              },
+              {
+                metaData: {
+                  title: "Victor, Fly Me to Stafford",
+                  artist: "My Little Airport",
+                },
+                url: "/songs/My Little Airport - Victor, Fly Me to Stafford [HQ].mp3",
+              },
+            ],
+            // Initial skin
+            initialSkin: {
+              url: "./webamp-skins/Nat-Amp_v01.wsz",
+            },
+            // Available skins for the skin menu
+            availableSkins: [
+              { url: "./webamp-skins/Nat-Amp_v01.wsz", name: "Nat Amp" },
+              { url: "./webamp-skins/X_-_Hinoto.wsz", name: "X Hinoto" },
+              {
+                url: "./webamp-skins/Serial Experiments Lain - You Don't Understand.wsz",
+                name: "Serial Experiments Lain",
+              },
+              { url: "./webamp-skins/Love_Hina_v1_9.wsz", name: "Love Hina" },
+            ],
+            // Enable Milkdrop visualizer
+            __butterchurnOptions: {
+              importButterchurn: () => Promise.resolve(window.butterchurn),
+              getPresets: () => {
+                const presets = window.butterchurnPresets.getPresets();
+                return Object.keys(presets).map((name) => {
+                  return {
+                    name,
+                    butterchurnPresetObject: presets[name],
+                  };
+                });
+              },
+              butterchurnOpen: true, // Open the visualizer by default
+            },
+            windowLayout: {
+              main: { position: { top: 0, left: 0 } },
+              equalizer: { position: { top: 116, left: 0 } },
+              playlist: {
+                position: { top: 232, left: 0 },
+                size: { extraWidth: 0, extraHeight: 4 },
+              },
+              milkdrop: {
+                position: { top: 0, left: 275 }, // Position of the visualizer
+                size: { extraHeight: 12, extraWidth: 7 },
+              },
+            },
+          });
+
+          // Render Webamp and set volume
+          webamp
+            .renderWhenReady(document.getElementById("winamp-container"))
+            .then(() => {
+              webamp.setVolume(10); // Set initial volume to 25%
+              console.log("Webamp is ready!");
+            });
+
+          // You can still include the track change and skin switch logic here if needed
+        } else {
+          alert("Your browser does not support Webamp.");
+        }
+      });
+    </script>
   </body>
 </html>
