@@ -139,7 +139,7 @@ footer {
 @media (max-width: 992px) {
   body {
     overflow: auto;
-    background-image: url(/images/4.gif) center / cover;
+    background: url(/images/gradient.gif) center / cover;
   }
 
   .container {
