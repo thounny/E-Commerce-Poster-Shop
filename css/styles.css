@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--primary-color);
-  overflow: auto;
+  overflow-y: scroll;
   background: url(/images/gradient.gif) center / cover;
 }
 
@@ -54,6 +54,38 @@ a {
 
 #cart-count {
   color: var(--text-color-black);
+}
+
+/* PRODUCTS PAGE */
+.products .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.products .card img {
+  max-height: 20rem;
+  object-fit: contain;
+}
+.products .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.products .card-body h5 {
+  margin-bottom: 1rem;
+}
+
+.products .btn {
+  margin-top: auto;
+}
+
+.container {
+  flex-grow: 1;
+  margin-bottom: 60px;
 }
 
 /* HERO */
