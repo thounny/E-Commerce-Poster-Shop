@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   background-color: var(--primary-color);
   overflow: auto;
-  background: url(/images/gradient.gif) center/cover;
+  background: url(/images/gradient.gif)center/cover;
 }
 
 /* NAVBAR */
