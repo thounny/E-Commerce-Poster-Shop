@@ -32,7 +32,7 @@ nav {
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(14.1px);
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Adjusted border color */
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .navbar-brand {
@@ -130,19 +130,19 @@ footer {
   padding: 10px 0;
   position: fixed;
   width: 100%;
-  margin-top: auto; /* Ensure the footer stays at the bottom */
+  margin-top: auto; /* STICK TO BOTTOM */
   bottom: 0;
   background: var(--card-bg-color);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(14.1px);
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Adjusted border color */
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 
 /* Navbar Toggler Styles */
 .navbar-toggler {
-  border: 2px solid rgba(255, 255, 255, 0.8); /* White border for toggler */
+  border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 8px;
 }
 
@@ -152,7 +152,7 @@ footer {
 
 /* WEBAMP */
 #winamp-container {
-  flex-grow: 1; /* Fills the remaining space */
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,11 +183,5 @@ footer {
   #winamp-container {
     flex-direction: column;
     max-width: 90%;
-  }
-
-  /* Reduce the size of the Webamp window for mobile devices */
-  .gen-window {
-    width: 260px;
-    height: 190px;
   }
 }
