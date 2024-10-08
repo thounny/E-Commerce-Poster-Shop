@@ -9,7 +9,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <!-- Updated CSS file link -->
   </head>
   <body>
     <!-- NAVBAR -->
@@ -57,9 +58,9 @@
 
     <!-- Main Content -->
     <div class="products container my-5">
-      <h2 class="text-center poster">My Posters</h2>
-      <div class="row">
-        <div class="col-md-4">
+      <h2 class="text-center poster my-posters-title">My Posters</h2>
+      <div class="row d-flex justify-content-between">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="posters/1.png" class="card-img-top" alt="Poster 1" />
             <div class="card-body">
@@ -69,7 +70,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="posters/2.png" class="card-img-top" alt="Poster 2" />
             <div class="card-body">
@@ -79,7 +80,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="posters/3.png" class="card-img-top" alt="Poster 3" />
             <div class="card-body">
@@ -89,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="posters/4.png" class="card-img-top" alt="Poster 4" />
             <div class="card-body">
@@ -99,7 +100,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="posters/5.png" class="card-img-top" alt="Poster 5" />
             <div class="card-body">
@@ -109,15 +110,13 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="posters/6.png" class="card-img-top" alt="Poster 6" />
             <div class="card-body">
               <h5 class="card-title">Poster 6</h5>
               <p class="card-text">$25.00</p>
-              <button class="btn btn-primary" onclick="addToCart()">
-                Add to Cart
-              </button>
+              <button class="btn btn-primary">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -125,7 +124,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center py-4">&copy; 2024 thounny</footer>
+    <footer class="text-center py-4">&copy; 2024 Thounny</footer>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -1,0 +1,176 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #007bff;
+  --footer-bg-color: rgba(52, 58, 64, 0.7); /* Glass effect for footer */
+  --navbar-bg-color: rgba(255, 255, 255, 0.3);
+  --card-bg-color: #fff; /* White card background */
+  --text-color-black: #141010; /* Black text color */
+  --text-color-white: #fff; /* White text color for footer */
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helveticaneue.woff2");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  overflow-y: scroll;
+  background: url(../images/gradient.gif) center / cover;
+}
+
+/* NAVBAR */
+nav {
+  background: var(--navbar-bg-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.1px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  mix-blend-mode: difference;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+#cart-count {
+  color: var(--text-color-black);
+}
+
+/* PRODUCTS PAGE */
+.products .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: var(--card-bg-color); /* White background for cards */
+  border-radius: 8px;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem; /* Add padding to the card for better spacing */
+}
+
+.products .card img {
+  height: 250px; /* Maintain height for larger images */
+  width: calc(100% - 40px); /* Ensure the image fills the width of the card */
+  object-fit: contain; /* Make sure the entire image is visible */
+  margin: 20px; /* Set margins around the image */
+}
+
+.products .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center align contents vertically */
+  padding: 1rem;
+  color: var(--text-color-black); /* Black text color for card content */
+  text-align: center; /* Center-align text */
+}
+
+.products .card-body h5 {
+  margin: 10px 0; /* Vertical margins for spacing */
+}
+
+.products .card-body p {
+  margin: 10px 0; /* Vertical margins for spacing */
+}
+
+.products .btn {
+  margin-top: 10px; /* Add margin to separate the button from the text */
+}
+
+/* FOOTER */
+footer {
+  background: var(--navbar-bg-color); /* Same background as navbar */
+  color: var(--text-color-white); /* White text color for footer */
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-radius: 16px; /* Match the navbar's border radius */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Similar shadow to navbar */
+  backdrop-filter: blur(14.1px); /* Glass effect for footer */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: border for a clean look */
+  text-align: center;
+}
+
+/* HERO */
+.container {
+  flex-grow: 1;
+}
+
+.full-height {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* TEXT STYLES */
+h1,
+h2.my-posters-title,
+.lead,
+.product,
+.checkout,
+.form-check-label,
+.form-group,
+.table,
+.text-right {
+  color: var(--text-color-white); /* Default color for headings */
+}
+
+.my-posters-title {
+  color: var(--text-color-white); /* Make "My Posters" title white */
+}
+
+/* SPECIFIC TEXT COLOR */
+.white-text {
+  color: var(--text-color-white); /* Ensure white text is used */
+}
+
+.black-text {
+  color: var(--text-color-black); /* Keep black text color */
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  body {
+    overflow: auto;
+    background: url(../images/gradient.gif) center / cover;
+  }
+
+  .container {
+    flex: 1;
+    padding-bottom: 20px;
+  }
+
+  /* Webamp container adjustments for smaller screens */
+  #winamp-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+}
